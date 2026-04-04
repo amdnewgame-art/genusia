@@ -1091,7 +1091,7 @@ async function searchComponent() {
   const stepEl = document.getElementById('loaderStep');
   const iv = setInterval(() => { if (si < STEPS.length) stepEl.textContent = '› ' + STEPS[si++]; }, 700);
 
-  const GEMINI_KEY = 'AIzaSyDMoQ7As10_YRWSvQvc8gXODzDKypj4h6E';
+  const GEMINI_KEY = 'AIzaSyBqRekRsBm7sHdXk6z527PNWZQu4aJeM9M';
   const searchPrompt = `Eres GenusIA, el experto mundial en componentes electrónicos. El usuario busca: "${query}". Devuelve ÚNICAMENTE JSON válido con esta estructura exacta (sin markdown, sin backticks):
 
 {
@@ -1207,7 +1207,7 @@ async function analyze() {
 
 Si no podés identificar el componente, igual completa lo que puedas y usa confianza baja. Responde SOLO JSON.`;
 
-  const GEMINI_KEY = 'AIzaSyDMoQ7As10_YRWSvQvc8gXODzDKypj4h6E';
+  const GEMINI_KEY = 'AIzaSyBqRekRsBm7sHdXk6z527PNWZQu4aJeM9M';
 
   try {
     const res = await fetch(
