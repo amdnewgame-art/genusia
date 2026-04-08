@@ -35,7 +35,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ── Noise grain overlay ── */
 body::after {
   content:'';
   position:fixed; inset:0;
@@ -43,7 +42,6 @@ body::after {
   pointer-events:none; z-index:999; opacity:.5;
 }
 
-/* ── Glowing orb BG ── */
 .orb {
   position:fixed;
   border-radius:50%;
@@ -54,7 +52,6 @@ body::after {
 .orb-1 { width:500px;height:500px; background:rgba(240,180,41,0.06); top:-100px; left:-100px; }
 .orb-2 { width:400px;height:400px; background:rgba(56,189,248,0.05); bottom:-80px; right:-80px; }
 
-/* ── Layout ── */
 .wrap {
   position:relative; z-index:1;
   max-width:860px;
@@ -62,7 +59,6 @@ body::after {
   padding:0 20px 60px;
 }
 
-/* ── NAV ── */
 nav {
   display:flex; align-items:center; gap:12px;
   padding:28px 0 36px;
@@ -122,7 +118,6 @@ nav {
   color:var(--gold);
 }
 
-/* ── HERO ── */
 .hero {
   text-align:center;
   padding-bottom:48px;
@@ -169,7 +164,6 @@ nav {
   font-weight:400;
 }
 
-/* ── COUNTER ── */
 .counter-bar {
   display:flex; align-items:center; justify-content:center; gap:6px;
   margin-top:24px;
@@ -189,7 +183,6 @@ nav {
 .dot.used { background:var(--border2); box-shadow:none; }
 .dot.last { background:var(--red); box-shadow:0 0 6px var(--red); }
 
-/* ── UPLOAD ── */
 .upload-area {
   position:relative;
   border:1.5px dashed var(--border2);
@@ -210,7 +203,6 @@ nav {
   pointer-events:none;
 }
 
-/* Corner accents */
 .upload-area::after {
   content:'';
   position:absolute;
@@ -296,7 +288,6 @@ nav {
 
 #fileInput, #camInput { display:none; }
 
-/* ── PREVIEW ── */
 .preview-wrap {
   display:none;
   gap:20px;
@@ -368,7 +359,6 @@ nav {
 }
 .btn-new:hover { border-color:var(--red); color:var(--red); }
 
-/* ── LOADER ── */
 .loader {
   display:none;
   background:var(--surface);
@@ -438,7 +428,6 @@ nav {
   transition:all .3s;
 }
 
-/* ── ERROR ── */
 .err-box {
   display:none;
   background:rgba(248,113,113,.07);
@@ -452,7 +441,6 @@ nav {
 }
 .err-box.on { display:block; }
 
-/* ── RESULTS ── */
 .results {
   display:none;
   flex-direction:column;
@@ -461,7 +449,6 @@ nav {
 }
 .results.on { display:flex; }
 
-/* Status bar */
 .status-bar {
   display:flex; align-items:center; gap:10px;
   padding:12px 18px;
@@ -482,7 +469,6 @@ nav {
 
 .status-bar span { font-family:var(--mono); font-size:11px; letter-spacing:1px; }
 
-/* Cards grid */
 .cards {
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -530,7 +516,6 @@ nav {
   margin-top:4px;
 }
 
-/* Description */
 .desc-text {
   font-size:14px;
   line-height:1.75;
@@ -539,7 +524,6 @@ nav {
   padding-left:16px;
 }
 
-/* Specs */
 .spec-row {
   display:flex;
   border-bottom:1px solid var(--border);
@@ -550,7 +534,6 @@ nav {
 .spec-k { font-family:var(--mono); color:var(--muted); font-size:11px; flex:0 0 45%; padding-right:12px; }
 .spec-v { font-weight:700; color:var(--text); }
 
-/* Equiv tags */
 .tag-row { display:flex; flex-wrap:wrap; gap:8px; }
 .tag {
   font-family:var(--mono);
@@ -565,7 +548,6 @@ nav {
 }
 .tag:hover { background:rgba(56,189,248,.16); transform:translateY(-1px); }
 
-/* Action links */
 .action-row { display:flex; flex-wrap:wrap; gap:10px; }
 
 .alink {
@@ -589,7 +571,6 @@ nav {
 .alink-ghost { background:transparent; color:var(--muted); border:1px solid var(--border2); }
 .alink-ghost:hover { border-color:var(--border2); color:var(--text); }
 
-/* Warning */
 .warn {
   display:flex; gap:10px; align-items:flex-start;
   background:rgba(251,191,36,.06);
@@ -603,7 +584,6 @@ nav {
 }
 .warn-icon { flex-shrink:0; font-size:16px; }
 
-/* ── SEARCH BAR ── */
 .search-section {
   margin-bottom: 20px;
   animation: fadeUp .7s .15s ease both;
@@ -672,7 +652,6 @@ nav {
   content: ''; flex: 1; height: 1px; background: var(--border);
 }
 
-/* ── PRICING MODAL ── */
 .modal-overlay {
   display:none; position:fixed; inset:0; z-index:1000;
   background:rgba(0,0,0,0.85); backdrop-filter:blur(8px);
@@ -730,7 +709,6 @@ nav {
 }
 .affiliates-box strong { color:var(--cyan); }
 
-/* ── FOOTER ── */
 footer {
   margin-top:64px;
   padding-top:24px;
@@ -745,7 +723,6 @@ footer {
 .foot-logo span { color:var(--gold); }
 .foot-note { font-family:var(--mono); font-size:10px; color:var(--muted); letter-spacing:1px; }
 
-/* ── ANIMATIONS ── */
 @keyframes fadeUp {
   from { opacity:0; transform:translateY(16px); }
   to   { opacity:1; transform:translateY(0); }
@@ -763,7 +740,6 @@ footer {
 
 <div class="wrap">
 
-  <!-- NAV -->
   <nav>
     <a class="nav-logo" href="#">
       <div class="logo-mark">
@@ -789,15 +765,12 @@ footer {
     </div>
   </nav>
 
-  <!-- PRICING MODAL -->
   <div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)this.classList.remove('on')">
     <div class="modal">
       <button class="modal-close" onclick="document.getElementById('modalOverlay').classList.remove('on')">✕</button>
       <div class="modal-title">Elige tu plan</div>
       <div class="modal-sub">GENUSIA · IDENTIFICADOR EXPERTO DE COMPONENTES ELECTRÓNICOS</div>
       <div class="plans">
-
-        <!-- GRATIS -->
         <div class="plan">
           <div class="plan-name">Gratis</div>
           <div class="plan-price">$0 <span>/ siempre</span></div>
@@ -812,8 +785,6 @@ footer {
           </ul>
           <button class="btn-plan ghost" onclick="document.getElementById('modalOverlay').classList.remove('on')">Continuar gratis</button>
         </div>
-
-        <!-- PRO -->
         <div class="plan featured">
           <div class="plan-badge">⭐ POPULAR</div>
           <div class="plan-name">PRO</div>
@@ -829,8 +800,6 @@ footer {
           </ul>
           <button class="btn-plan" onclick="showComingSoon()">Próximamente</button>
         </div>
-
-        <!-- TALLER -->
         <div class="plan">
           <div class="plan-name">Taller</div>
           <div class="plan-price">$19.99 <span>/ mes</span></div>
@@ -845,8 +814,6 @@ footer {
           </ul>
           <button class="btn-plan ghost" onclick="showComingSoon()">Próximamente</button>
         </div>
-
-        <!-- EXPERTO -->
         <div class="plan" style="border-color:rgba(56,189,248,0.5);background:linear-gradient(160deg,rgba(56,189,248,0.08) 0%,var(--surface2) 60%)">
           <div class="plan-badge" style="background:var(--cyan);color:#000">🏆 EXPERTO</div>
           <div class="plan-name" style="color:var(--cyan)">Experto</div>
@@ -863,7 +830,6 @@ footer {
           </ul>
           <button class="btn-plan" style="background:var(--cyan)" onclick="showComingSoon()">Próximamente</button>
         </div>
-
       </div>
       <div class="affiliates-box">
         💡 <strong>Ingresos adicionales:</strong> Comisión <strong>2–8%</strong> en cada compra desde Digi-Key o Mouser · Distribuidores locales destacados en resultados · White label para ferreterías y tiendas eléctricas
@@ -871,7 +837,6 @@ footer {
     </div>
   </div>
 
-  <!-- HERO -->
   <div class="hero">
     <div class="hero-eyebrow">Identificador Experto de Componentes Electrónicos</div>
     <h1>GenusIA — tu experto<br><em>en electrónica.</em></h1>
@@ -884,29 +849,16 @@ footer {
     </div>
 
     <div style="margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-      <button onclick="document.getElementById('modalOverlay').classList.add('on')" style="
-        background:linear-gradient(135deg,rgba(240,180,41,0.1),rgba(56,189,248,0.08));
-        border:1px solid rgba(240,180,41,0.35);
-        color:var(--gold); font-family:var(--syne); font-weight:700;
-        font-size:12px; padding:9px 20px; border-radius:100px;
-        cursor:pointer; transition:all .2s; letter-spacing:.3px;
-      " onmouseover="this.style.background='rgba(240,180,41,0.18)'" onmouseout="this.style.background='linear-gradient(135deg,rgba(240,180,41,0.1),rgba(56,189,248,0.08))'">
+      <button onclick="document.getElementById('modalOverlay').classList.add('on')" style="background:linear-gradient(135deg,rgba(240,180,41,0.1),rgba(56,189,248,0.08));border:1px solid rgba(240,180,41,0.35);color:var(--gold);font-family:var(--syne);font-weight:700;font-size:12px;padding:9px 20px;border-radius:100px;cursor:pointer;transition:all .2s;letter-spacing:.3px;" onmouseover="this.style.background='rgba(240,180,41,0.18)'" onmouseout="this.style.background='linear-gradient(135deg,rgba(240,180,41,0.1),rgba(56,189,248,0.08))'">
         ⚡ Gratis · PRO · Taller · Experto — Ver todos los planes
       </button>
     </div>
   </div>
 
-  <!-- SEARCH BAR -->
   <div class="search-section" id="searchSection">
     <div class="search-wrap">
       <span class="search-icon">🔍</span>
-      <input
-        type="text"
-        class="search-input"
-        id="searchInput"
-        placeholder="Busca cualquier componente electrónico... ej: NE555, transistor PNP, resistencia 10k..."
-        onkeydown="if(event.key==='Enter')searchComponent()"
-      >
+      <input type="text" class="search-input" id="searchInput" placeholder="Busca cualquier componente electrónico... ej: NE555, transistor PNP, resistencia 10k..." onkeydown="if(event.key==='Enter')searchComponent()">
       <button class="search-btn" onclick="searchComponent()">Consultar a GenusIA</button>
     </div>
     <div class="search-examples">
@@ -921,7 +873,6 @@ footer {
 
   <div class="divider-or" id="dividerOr">— O SUBE UNA FOTO —</div>
 
-  <!-- UPLOAD -->
   <div class="upload-area" id="uploadArea">
     <div class="upload-icon-wrap">⚡</div>
     <h2>Sube la foto del componente electrónico</h2>
@@ -934,7 +885,6 @@ footer {
     <input type="file" id="camInput"  accept="image/*" capture="environment" onchange="loadFile(this)">
   </div>
 
-  <!-- PREVIEW + ANALYZE -->
   <div class="preview-wrap" id="previewWrap">
     <div class="preview-img-box">
       <img id="prevImg" src="" alt="Componente">
@@ -950,7 +900,6 @@ footer {
     </div>
   </div>
 
-  <!-- LOADER -->
   <div class="loader" id="loader">
     <div class="scan-ring-wrap">
       <div class="ring ring-1"></div>
@@ -962,10 +911,8 @@ footer {
     <div class="loader-step" id="loaderStep">Inicializando GenusIA...</div>
   </div>
 
-  <!-- ERROR -->
   <div class="err-box" id="errBox"></div>
 
-  <!-- RESULTS -->
   <div class="results" id="results"></div>
 
   <footer>
@@ -980,12 +927,13 @@ footer {
 </div>
 
 <script>
-// ── State ──
+// TU API KEY - CORRECTA Y FUNCIONAL
+const GEMINI_KEY = 'AIzaSyBqRekRsBm7sHdXk6z527PNWZQu4aJeM9M';
+
 const MAX_FREE = 5;
 let used = parseInt(localStorage.getItem('genus_used') || '0');
 let imageB64 = null, imageMime = 'image/jpeg';
 
-// ── Counter dots ──
 function renderCounter() {
   const dots = document.getElementById('counterDots');
   const txt  = document.getElementById('counterText');
@@ -1001,7 +949,6 @@ function renderCounter() {
 }
 renderCounter();
 
-// Reset daily counter at midnight
 const today = new Date().toDateString();
 if (localStorage.getItem('genus_day') !== today) {
   localStorage.setItem('genus_day', today);
@@ -1009,7 +956,6 @@ if (localStorage.getItem('genus_day') !== today) {
   used = 0; renderCounter();
 }
 
-// ── File load ──
 function loadFile(input) {
   if (!input.files?.[0]) return;
   const file = input.files[0];
@@ -1028,7 +974,6 @@ function loadFile(input) {
   reader.readAsDataURL(file);
 }
 
-// Drag & drop
 const ua = document.getElementById('uploadArea');
 ua.addEventListener('dragover', e => { e.preventDefault(); ua.classList.add('drag'); });
 ua.addEventListener('dragleave', () => ua.classList.remove('drag'));
@@ -1048,7 +993,6 @@ function reset() {
   document.getElementById('camInput').value = '';
 }
 
-// ── Loading steps ──
 const STEPS = [
   'Procesando imagen con visión artificial...',
   'Detectando tipo de componente...',
@@ -1091,53 +1035,45 @@ async function searchComponent() {
   const stepEl = document.getElementById('loaderStep');
   const iv = setInterval(() => { if (si < STEPS.length) stepEl.textContent = '› ' + STEPS[si++]; }, 700);
 
-  const GEMINI_KEY = 'AIzaSyBqRekRsBm7sHdXk6z527PNWZQu4aJeM9M';
-  const searchPrompt = `Eres GenusIA, el experto mundial en componentes electrónicos. El usuario busca: "${query}". Devuelve ÚNICAMENTE JSON válido con esta estructura exacta (sin markdown, sin backticks):
+  const searchPrompt = `Eres GenusIA, experto en componentes electrónicos. Usuario busca: "${query}". Responde SOLO con JSON válido, sin texto adicional, sin markdown:
 
 {
   "identificado": true,
-  "tipo": "categoría del componente",
-  "nombre_completo": "nombre técnico completo",
-  "numero_parte": "número de parte exacto o el más común",
-  "fabricante": "fabricante principal",
-  "descripcion_tecnica": "descripción técnica en 1-2 oraciones",
-  "para_que_sirve": "explicación simple para cualquier persona en 2-3 oraciones",
+  "tipo": "categoría",
+  "nombre_completo": "nombre técnico",
+  "numero_parte": "código exacto",
+  "fabricante": "fabricante",
+  "descripcion_tecnica": "descripción técnica breve",
+  "para_que_sirve": "explicación simple en español",
   "especificaciones": {
-    "Voltaje máximo": "valor con unidad o null",
-    "Corriente máxima": "valor con unidad o null",
-    "Potencia disipada": "valor con unidad o null",
-    "Ganancia / hFE": "valor o null",
-    "Capacitancia": "valor o null",
-    "Resistencia": "valor o null",
-    "Encapsulado": "tipo de encapsulado más común",
-    "Temperatura operación": "rango o null",
-    "Tensión de disparo": "valor o null"
+    "Voltaje máximo": "valor",
+    "Corriente máxima": "valor",
+    "Potencia disipada": "valor",
+    "Encapsulado": "tipo"
   },
-  "equivalentes": ["máximo 5 equivalentes directos"],
-  "buscar_datasheet": "término óptimo para buscar el datasheet",
-  "advertencia": "advertencia técnica importante o null",
+  "equivalentes": ["equivalente1", "equivalente2"],
+  "buscar_datasheet": "término búsqueda",
+  "advertencia": null,
   "confianza": "alta"
 }`;
 
   try {
-    const res = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`,
-      {
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({
-          contents:[{ parts:[{ text: searchPrompt }] }],
-          generationConfig:{ temperature:0.1, maxOutputTokens:1000 }
-        })
-      }
-    );
+    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`, {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({
+        contents:[{ parts:[{ text: searchPrompt }] }],
+        generationConfig:{ temperature:0.1, maxOutputTokens:800 }
+      })
+    });
 
     clearInterval(iv);
 
-    if (!res.ok) { const e = await res.json(); throw new Error(e.error?.message || `Error ${res.status}`); }
+    if (!res.ok) throw new Error(`Error ${res.status}`);
 
     const data = await res.json();
-    const raw = (data.candidates?.[0]?.content?.parts?.[0]?.text || '').replace(/```json|```/g,'').trim();
+    let raw = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+    raw = raw.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim();
     const info = JSON.parse(raw);
 
     used++;
@@ -1155,12 +1091,11 @@ async function searchComponent() {
     document.getElementById('searchSection').style.opacity = '1';
     document.getElementById('uploadArea').style.display = 'block';
     const eb = document.getElementById('errBox');
-    eb.textContent = '⚠ ' + e.message;
+    eb.textContent = '⚠ Error: ' + e.message;
     eb.classList.add('on');
   }
 }
 
-// ── Analyze ──
 async function analyze() {
   if (!imageB64) return;
   if (used >= MAX_FREE) {
@@ -1178,68 +1113,52 @@ async function analyze() {
   const stepEl = document.getElementById('loaderStep');
   const iv = setInterval(() => { if (si < STEPS.length) stepEl.textContent = '› ' + STEPS[si++]; }, 800);
 
-  const prompt = `Eres un experto técnico senior en electrónica y electricidad industrial. Analiza la imagen y devuelve ÚNICAMENTE un objeto JSON válido (sin markdown, sin texto extra, sin backticks) con esta estructura exacta:
+  const prompt = `Analiza la imagen del componente electrónico. Responde SOLO con JSON válido:
 
 {
   "identificado": true,
-  "tipo": "categoría del componente",
-  "nombre_completo": "nombre técnico completo",
-  "numero_parte": "código/número de parte exacto o null",
-  "fabricante": "marca o fabricante o null",
-  "descripcion_tecnica": "descripción técnica en 1-2 oraciones",
-  "para_que_sirve": "explicación simple para técnico no experto en 2-3 oraciones",
+  "tipo": "categoría",
+  "nombre_completo": "nombre técnico",
+  "numero_parte": "código visible o null",
+  "fabricante": "marca o null",
+  "descripcion_tecnica": "descripción técnica breve",
+  "para_que_sirve": "explicación en español para técnico",
   "especificaciones": {
-    "Voltaje máximo": "valor con unidad o null",
-    "Corriente máxima": "valor con unidad o null",
-    "Potencia disipada": "valor con unidad o null",
-    "Ganancia / hFE": "valor o null",
-    "Capacitancia": "valor o null",
-    "Resistencia": "valor o null",
-    "Encapsulado": "tipo de encapsulado",
-    "Temperatura operación": "rango o null",
-    "Tensión de disparo": "valor o null"
+    "Voltaje máximo": "valor o null",
+    "Corriente máxima": "valor o null",
+    "Potencia disipada": "valor o null",
+    "Encapsulado": "tipo"
   },
-  "equivalentes": ["máximo 5 equivalentes o sustitutos directos"],
-  "buscar_datasheet": "término óptimo para buscar en Google el datasheet",
-  "advertencia": "advertencia importante para el técnico o null",
-  "confianza": "alta | media | baja"
-}
-
-Si no podés identificar el componente, igual completa lo que puedas y usa confianza baja. Responde SOLO JSON.`;
-
-  const GEMINI_KEY = 'AIzaSyBqRekRsBm7sHdXk6z527PNWZQu4aJeM9M';
+  "equivalentes": ["equivalente1"],
+  "buscar_datasheet": "término búsqueda",
+  "advertencia": null,
+  "confianza": "alta"
+}`;
 
   try {
-    const res = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`,
-      {
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({
-          contents:[{
-            parts:[
-              { inline_data:{ mime_type: imageMime, data: imageB64 } },
-              { text: prompt }
-            ]
-          }],
-          generationConfig:{ temperature:0.1, maxOutputTokens:1000 }
-        })
-      }
-    );
+    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`, {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({
+        contents:[{
+          parts:[
+            { inline_data:{ mime_type: imageMime, data: imageB64 } },
+            { text: prompt }
+          ]
+        }],
+        generationConfig:{ temperature:0.1, maxOutputTokens:800 }
+      })
+    });
 
     clearInterval(iv);
 
-    if (!res.ok) {
-      const e = await res.json();
-      throw new Error(e.error?.message || `Error ${res.status}`);
-    }
+    if (!res.ok) throw new Error(`Error ${res.status}`);
 
     const data = await res.json();
-    const raw = (data.candidates?.[0]?.content?.parts?.[0]?.text || '')
-      .replace(/```json|```/g,'').trim();
+    let raw = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+    raw = raw.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim();
     const info = JSON.parse(raw);
 
-    // Count usage
     used++;
     localStorage.setItem('genus_used', String(used));
     renderCounter();
@@ -1258,7 +1177,6 @@ Si no podés identificar el componente, igual completa lo que puedas y usa confi
   document.getElementById('btnAnalyze').disabled = false;
 }
 
-// ── Render ──
 function renderResults(d) {
   const conf = (d.confianza||'').toLowerCase();
   const confClass = conf==='alta'?'high': conf==='media'?'med':'low';
@@ -1279,42 +1197,12 @@ function renderResults(d) {
   const q = encodeURIComponent(d.numero_parte || d.nombre_completo || d.tipo || '');
   const dsQ = encodeURIComponent((d.buscar_datasheet || d.numero_parte || d.nombre_completo) + ' datasheet filetype:pdf');
 
-  // Detección automática de país para MercadoLibre y tienda local
-  const mlDomains = {
-    'CL':'listado.mercadolibre.cl', 'AR':'listado.mercadolibre.com.ar',
-    'MX':'listado.mercadolibre.com.mx', 'CO':'listado.mercadolibre.com.co',
-    'PE':'listado.mercadolibre.com.pe', 'UY':'listado.mercadolibre.com.uy',
-    'BR':'lista.mercadolivre.com.br', 'VE':'listado.mercadolibre.com.ve'
-  };
-  const localStores = {
-    'CL': { label:'Solectro Chile', url:`https://www.solectro.cl/search?q=${q}` },
-    'AR': { label:'Farnell AR',     url:`https://ar.farnell.com/search?st=${q}` },
-    'MX': { label:'Steren México',  url:`https://www.steren.com.mx/catalogsearch/result/?q=${q}` },
-    'CO': { label:'Electronilab CO',url:`https://electronilab.co/?s=${q}` },
-    'PE': { label:'Electrostore PE',url:`https://electrostore.pe/?s=${q}` },
-  };
-  // Intentar obtener país desde timezone como aproximación
-  let userCountry = 'CL'; // default Chile (beta)
-  try {
-    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
-    if (tz.includes('Argentina')) userCountry = 'AR';
-    else if (tz.includes('Mexico')) userCountry = 'MX';
-    else if (tz.includes('Bogota')) userCountry = 'CO';
-    else if (tz.includes('Lima')) userCountry = 'PE';
-    else if (tz.includes('Montevideo')) userCountry = 'UY';
-    else if (tz.includes('Sao_Paulo') || tz.includes('Brazil')) userCountry = 'BR';
-    else if (tz.includes('Santiago') || tz.includes('Chile')) userCountry = 'CL';
-  } catch(e) {}
-  const mlDomain = mlDomains[userCountry] || mlDomains['CL'];
-  const localStore = localStores[userCountry];
-
   const storesList = [
-    { label:'Digi-Key',      cls:'alink-gold',  url:`https://www.digikey.com/products/en?keywords=${q}` },
-    { label:'Mouser',        cls:'alink-cyan',  url:`https://www.mouser.com/Search/Refine?Keyword=${q}` },
-    { label:'MercadoLibre',  cls:'alink-ghost', url:`https://` + mlDomain + `/${q}` },
-    { label:'AliExpress',    cls:'alink-ghost', url:`https://www.aliexpress.com/wholesale?SearchText=${q}` },
+    { label:'Digi-Key', cls:'alink-gold', url:`https://www.digikey.com/products/en?keywords=${q}` },
+    { label:'Mouser', cls:'alink-cyan', url:`https://www.mouser.com/Search/Refine?Keyword=${q}` },
+    { label:'MercadoLibre', cls:'alink-ghost', url:`https://listado.mercadolibre.cl/${q}` },
+    { label:'AliExpress', cls:'alink-ghost', url:`https://www.aliexpress.com/wholesale?SearchText=${q}` }
   ];
-  if (localStore) storesList.splice(2, 0, { label: localStore.label, cls:'alink-ghost', url: localStore.url });
 
   const stores = storesList.map(s => `<a href="${s.url}" target="_blank" class="alink ${s.cls}">🛒 ${s.label}</a>`).join('');
 
@@ -1344,16 +1232,9 @@ function renderResults(d) {
         <div class="desc-text">${d.para_que_sirve||d.descripcion_tecnica||'—'}</div>
       </div>
 
-      ${specs ? `<div class="card full">
-        <div class="card-lbl">Especificaciones técnicas</div>
-        ${specs}
-      </div>` : ''}
+      ${specs ? `<div class="card full"><div class="card-lbl">Especificaciones técnicas</div>${specs}</div>` : ''}
 
-      ${equivs ? `<div class="card full">
-        <div class="card-lbl">Equivalentes y sustitutos</div>
-        <div class="tag-row">${equivs}</div>
-        <div class="card-sub" style="margin-top:10px">Hacé click en cada uno para buscar su datasheet</div>
-      </div>` : ''}
+      ${equivs ? `<div class="card full"><div class="card-lbl">Equivalentes y sustitutos</div><div class="tag-row">${equivs}</div><div class="card-sub" style="margin-top:10px">Hacé click en cada uno para buscar su datasheet</div></div>` : ''}
 
       ${warn}
 
