@@ -697,8 +697,9 @@ nav {
 .modal-title { font-size:26px; font-weight:900; letter-spacing:-1px; color:#fff; text-align:center; margin-bottom:4px; }
 .modal-sub { font-family:var(--mono); font-size:11px; color:var(--muted); text-align:center; letter-spacing:1px; margin-bottom:28px; }
 
-.plans { display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; }
-@media(max-width:640px){ .plans { grid-template-columns:1fr; } }
+.plans { display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:12px; }
+@media(max-width:900px){ .plans { grid-template-columns:1fr 1fr; } }
+@media(max-width:500px){ .plans { grid-template-columns:1fr; } }
 
 .plan {
   background:var(--surface2); border:1px solid var(--border2);
@@ -783,7 +784,7 @@ footer {
       </div>
     </a>
     <div class="nav-right">
-      <div class="pill pill-free" id="planBadge" onclick="document.getElementById('modalOverlay').classList.add('on')" style="cursor:pointer">✦ GRATIS</div>
+      <div class="pill pill-free" id="planBadge" onclick="document.getElementById('modalOverlay').classList.add('on')" style="cursor:pointer">✦ Gratis · Ver planes ▲</div>
       <div class="pill pill-pro" id="proBadge" style="display:none;cursor:pointer" onclick="document.getElementById('modalOverlay').classList.add('on')">★ PRO</div>
     </div>
   </nav>
@@ -793,8 +794,10 @@ footer {
     <div class="modal">
       <button class="modal-close" onclick="document.getElementById('modalOverlay').classList.remove('on')">✕</button>
       <div class="modal-title">Elige tu plan</div>
-      <div class="modal-sub">GENUIA · IDENTIFICADOR DE COMPONENTES ELECTRÓNICOS</div>
+      <div class="modal-sub">GENUSIA · IDENTIFICADOR EXPERTO DE COMPONENTES ELECTRÓNICOS</div>
       <div class="plans">
+
+        <!-- GRATIS -->
         <div class="plan">
           <div class="plan-name">Gratis</div>
           <div class="plan-price">$0 <span>/ siempre</span></div>
@@ -803,31 +806,33 @@ footer {
             <li>Tipo, nombre y función</li>
             <li>Link al datasheet</li>
             <li>Búsqueda por texto o foto</li>
-            <li class="no">Descarga PDF datasheet</li>
+            <li class="no">Datasheet PDF descargable</li>
             <li class="no">Historial de búsquedas</li>
-            <li class="no">Precios en tiempo real</li>
             <li class="no">Sin marca de agua</li>
           </ul>
-          <button class="btn-plan ghost" onclick="document.getElementById('modalOverlay').classList.remove('on')">Usar gratis</button>
+          <button class="btn-plan ghost" onclick="document.getElementById('modalOverlay').classList.remove('on')">Continuar gratis</button>
         </div>
+
+        <!-- PRO -->
         <div class="plan featured">
           <div class="plan-badge">⭐ POPULAR</div>
           <div class="plan-name">PRO</div>
           <div class="plan-price">$8.99 <span>/ mes</span></div>
           <ul class="plan-features">
             <li>Identificaciones ilimitadas</li>
-            <li>Tipo, nombre y función</li>
-            <li>Link al datasheet</li>
             <li>Búsqueda por texto o foto</li>
-            <li>Descarga PDF datasheet</li>
+            <li>Datasheet PDF descargable</li>
             <li>Historial de componentes</li>
             <li>Precios en tiempo real por país</li>
             <li>Sin publicidad ni marca de agua</li>
+            <li>Equivalentes con disponibilidad</li>
           </ul>
           <button class="btn-plan" onclick="showComingSoon()">Próximamente</button>
         </div>
+
+        <!-- TALLER -->
         <div class="plan">
-          <div class="plan-name">Taller Pro</div>
+          <div class="plan-name">Taller</div>
           <div class="plan-price">$19.99 <span>/ mes</span></div>
           <ul class="plan-features">
             <li>Todo lo de PRO incluido</li>
@@ -835,27 +840,59 @@ footer {
             <li>Exportar reportes en PDF</li>
             <li>API para sistemas propios</li>
             <li>White label disponible</li>
-            <li>Soporte prioritario</li>
+            <li>🎓 Clases de soldadura práctica</li>
+            <li>🎓 Curso de componentes y circuitos</li>
           </ul>
           <button class="btn-plan ghost" onclick="showComingSoon()">Próximamente</button>
         </div>
+
+        <!-- EXPERTO -->
+        <div class="plan" style="border-color:rgba(56,189,248,0.5);background:linear-gradient(160deg,rgba(56,189,248,0.08) 0%,var(--surface2) 60%)">
+          <div class="plan-badge" style="background:var(--cyan);color:#000">🏆 EXPERTO</div>
+          <div class="plan-name" style="color:var(--cyan)">Experto</div>
+          <div class="plan-price" style="font-size:24px">$49.99 <span>/ mes</span></div>
+          <ul class="plan-features">
+            <li>Todo lo de Taller incluido</li>
+            <li>🎓 Electrónica Digital básico→avanzado</li>
+            <li>🎓 Diseño de PCB profesional</li>
+            <li>🎓 Simulación en Proteus completo</li>
+            <li>🎓 Programación de PIC básico→avanzado</li>
+            <li>🎓 Amplificadores operacionales</li>
+            <li>🎓 Videos exclusivos a pedido</li>
+            <li>Soporte personalizado 1 a 1</li>
+          </ul>
+          <button class="btn-plan" style="background:var(--cyan)" onclick="showComingSoon()">Próximamente</button>
+        </div>
+
       </div>
       <div class="affiliates-box">
-        💡 <strong>Ingresos adicionales:</strong> Cada compra desde links de Digi-Key o Mouser genera <strong>2–8% de comisión</strong>. Los distribuidores locales pueden aparecer destacados en resultados. White label disponible para ferreterías y tiendas eléctricas.
+        💡 <strong>Ingresos adicionales:</strong> Comisión <strong>2–8%</strong> en cada compra desde Digi-Key o Mouser · Distribuidores locales destacados en resultados · White label para ferreterías y tiendas eléctricas
       </div>
     </div>
   </div>
 
   <!-- HERO -->
   <div class="hero">
-    <div class="hero-eyebrow">Identificador de Componentes Electrónicos</div>
-    <h1>Fotografiá cualquier<br><em>componente electrónico.</em></h1>
-    <p>Sube una foto y GenusIA te dice exactamente qué componente electrónico es, para qué sirve y te da el link al datasheet oficial — sin necesitar conocimientos previos.</p>
+    <div class="hero-eyebrow">Identificador Experto de Componentes Electrónicos</div>
+    <h1>GenusIA — tu experto<br><em>en electrónica.</em></h1>
+    <p>Identifica componentes por foto o búsqueda, obtén datasheets, equivalentes y aprende electrónica desde cero hasta nivel experto — todo en un solo lugar.</p>
 
     <div class="counter-bar" id="counterBar">
       <span>Consultas hoy:</span>
       <div class="counter-dots" id="counterDots"></div>
       <span id="counterText">5 disponibles</span>
+    </div>
+
+    <div style="margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <button onclick="document.getElementById('modalOverlay').classList.add('on')" style="
+        background:linear-gradient(135deg,rgba(240,180,41,0.1),rgba(56,189,248,0.08));
+        border:1px solid rgba(240,180,41,0.35);
+        color:var(--gold); font-family:var(--syne); font-weight:700;
+        font-size:12px; padding:9px 20px; border-radius:100px;
+        cursor:pointer; transition:all .2s; letter-spacing:.3px;
+      " onmouseover="this.style.background='rgba(240,180,41,0.18)'" onmouseout="this.style.background='linear-gradient(135deg,rgba(240,180,41,0.1),rgba(56,189,248,0.08))'">
+        ⚡ Gratis · PRO · Taller · Experto — Ver todos los planes
+      </button>
     </div>
   </div>
 
@@ -1054,7 +1091,7 @@ async function searchComponent() {
   const stepEl = document.getElementById('loaderStep');
   const iv = setInterval(() => { if (si < STEPS.length) stepEl.textContent = '› ' + STEPS[si++]; }, 700);
 
-  const GEMINI_KEY = 'AIzaSyAcDTOdimJ0ap8cQOUXw-S-At0s6zMgzB8';
+  const ANTHROPIC_KEY = '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';
   const searchPrompt = `Eres GenusIA, el experto mundial en componentes electrónicos. El usuario busca: "${query}". Devuelve ÚNICAMENTE JSON válido con esta estructura exacta (sin markdown, sin backticks):
 
 {
@@ -1084,13 +1121,22 @@ async function searchComponent() {
 
   try {
     const res = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`,
+      'https://api.anthropic.com/v1/messages',
       {
         method:'POST',
-        headers:{'Content-Type':'application/json'},
+        headers:{
+          'Content-Type':'application/json',
+          'x-api-key': ANTHROPIC_KEY,
+          'anthropic-version': '2023-06-01',
+          'anthropic-dangerous-direct-browser-access': 'true'
+        },
         body: JSON.stringify({
-          contents:[{ parts:[{ text: searchPrompt }] }],
-          generationConfig:{ temperature:0.1, maxOutputTokens:1000 }
+          model:'claude-sonnet-4-20250514',
+          max_tokens:1000,
+          messages:[{
+            role:'user',
+            content: searchPrompt
+          }]
         })
       }
     );
@@ -1100,7 +1146,7 @@ async function searchComponent() {
     if (!res.ok) { const e = await res.json(); throw new Error(e.error?.message || `Error ${res.status}`); }
 
     const data = await res.json();
-    const raw = (data.candidates?.[0]?.content?.parts?.[0]?.text || '').replace(/```json|```/g,'').trim();
+    const raw = data.content.map(b => b.text||'').join('').replace(/```json|```/g,'').trim();
     const info = JSON.parse(raw);
 
     used++;
@@ -1170,22 +1216,29 @@ async function analyze() {
 
 Si no podés identificar el componente, igual completa lo que puedas y usa confianza baja. Responde SOLO JSON.`;
 
-  const GEMINI_KEY = 'AIzaSyAcDTOdimJ0ap8cQOUXw-S-At0s6zMgzB8';
+  const ANTHROPIC_KEY = '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';
 
   try {
     const res = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`,
+      'https://api.anthropic.com/v1/messages',
       {
         method:'POST',
-        headers:{'Content-Type':'application/json'},
+        headers:{
+          'Content-Type':'application/json',
+          'x-api-key': ANTHROPIC_KEY,
+          'anthropic-version': '2023-06-01',
+          'anthropic-dangerous-direct-browser-access': 'true'
+        },
         body: JSON.stringify({
-          contents:[{
-            parts:[
-              { inline_data:{ mime_type: imageMime, data: imageB64 } },
-              { text: prompt }
+          model:'claude-sonnet-4-20250514',
+          max_tokens:1000,
+          messages:[{
+            role:'user',
+            content:[
+              { type:'image', source:{ type:'base64', media_type:imageMime, data:imageB64 } },
+              { type:'text', text:prompt }
             ]
-          }],
-          generationConfig:{ temperature:0.1, maxOutputTokens:1000 }
+          }]
         })
       }
     );
